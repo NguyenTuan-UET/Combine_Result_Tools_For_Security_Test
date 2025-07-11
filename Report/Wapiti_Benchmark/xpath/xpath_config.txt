@@ -1,0 +1,24 @@
+wapiti -u https://localhost:8444/benchmark/xpathi-Index.html -m sql --scope domain --flush-session --max-links-per-page 500 --max-parameters 100 --headless hidden --color -v 2 --tasks 15 --verify-ssl 0 --max-scan-time 28800 -f html -o D:\VNU\Lab\Report
+
+1h20 -> 1h22 : 2p
+
+
+wapiti -u https://localhost:8444/benchmark/xpathi-Index.html -m sql --scope domain --flush-session --max-links-per-page 500 --max-parameters 100 --color -v 2 --tasks 15 --verify-ssl 0 --max-scan-time 28800 -f json -o D:\VNU\Lab\Report\xpathi_report.json
+
+8h37 - 8h38 : 1p
+
+
+[*] Existing modules:
+         backup, brute_login_form, buster, cms, cookieflags, crlf, csp, csrf, exec, file, htaccess, htp, http_headers, https_redirect, ldap, log4shell, methods, network_device, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+[!] Unable to find a module named xpath
+
+không hỗ trợ nhưng 
+
+Module sql của Wapiti bao quát SQL injection và có ghi chú hỗ trợ XPath injection:
+
+sql: Detect SQL (also XPath) injection vulnerabilities using error-based or boolean-based (blind) techniques.
+
+Tuy nhiên:
+✅ Thực tế module này chỉ quét XPath injection trong những trường hợp lỗi lộ qua HTTP response (như thông báo lỗi XPath trong HTML),
+❗ còn nếu ứng dụng không trả lỗi chi tiết (silent fail) thì sẽ không phát hiện ra.
+

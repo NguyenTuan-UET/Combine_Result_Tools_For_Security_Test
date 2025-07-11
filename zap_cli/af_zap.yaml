@@ -1,0 +1,91 @@
+name: ZAP CMDi Specific Scan for Target Application
+
+env:
+  contexts:
+    - name: "Benchmark"
+      urls:
+        - "https://localhost:8443/benchmark/cmdi-Index.html"
+      includePaths:
+        - "https://localhost:8443/benchmark/cmdi.*"
+      excludePaths: []
+      authentication:
+        parameters: {}
+        verification:
+          method: "response"
+          pollFrequency: 60
+          pollUnits: "requests"
+      sessionManagement:
+        method: "cookie"
+        parameters: {}
+
+  parameters:
+    failOnError: true
+    failOnWarning: false
+    progressToStdout: true
+
+jobs:
+  # Job: Định nghĩa chính sách quét chỉ tập trung vào CMDi (rule 90020)
+  - name: "CMDi Specific Policy"
+    type: "activeScan-policy"
+    parameters:
+      name: "CMDiOnlyPolicy" # Tên chính sách mới
+    policyDefinition:
+      defaultStrength: "Medium" # <--- ĐÃ SỬA: Đặt defaultStrength thành "High"
+      defaultThreshold: "Medium" # Mặc định tắt tất cả các quy tắc
+      rules:
+        - id: 90020 # Chỉ bật rule Remote OS Command Injection
+          name: "Remote OS Command Injection"
+          strength: "Medium" # Mức độ tấn công cao cho CMDi
+          threshold: "Medium" # Báo cáo tất cả các cảnh báo CMDi
+
+  # Job: Khám phá ứng dụng bằng Spider
+  - name: "Spider CMDi Index"
+    type: "spider"
+    parameters:
+      context: "Benchmark"
+      user: ""
+      url: ""
+      maxDuration: 0
+      maxDepth: 0
+      maxChildren: 0
+    tests:
+      - name: "Ensure Spider Found URLs"
+        type: stats
+        onFail: "INFO"
+        statistic: 'automation.spider.urls.added'
+        operator: '>='
+        value: 1
+
+  # Job: Bắt đầu Active Scan với chính sách CMDi
+  - name: "Start Active Scan for CMDi"
+    type: "activeScan"
+    parameters:
+      context: "Benchmark"
+      user: ""
+      policy: "CMDiOnlyPolicy" # Sử dụng chính sách CMDi vừa định nghĩa
+      maxRuleDurationInMins: 60
+      maxScanDurationInMins: 60
+      addQueryParam: false
+      delayInMs: 0
+      handleAntiCSRFTokens: false
+      injectPluginIdInHeader: false
+      scanHeadersAllRequests: true
+      threadPerHost: 4
+    tests:
+      - onFail: "INFO"
+        statistic: "stats.ascan.90020.alerts"
+        site: ""
+        operator: ">="
+        value: 1 # Đặt giá trị mong đợi (ví dụ: ít nhất 1 cảnh báo CMDi)
+        name: "Number of CMDi Alerts Raised"
+        type: "stats"
+
+  # Job: Tạo báo cáo chỉ cho lỗi CMDi
+  - name: "Generate CMDi Report"
+    type: "report"
+    parameters:
+      template: traditional-html
+      reportDir: "D:/VNU/Lab/zap_cli/report"
+      reportFile: "cmdi.html"
+      reportDescription: "ZAP Automation Framework Report for Command Injection Vulnerabilities."
+      reportTitle: "ZAP CMDi Scan Report"

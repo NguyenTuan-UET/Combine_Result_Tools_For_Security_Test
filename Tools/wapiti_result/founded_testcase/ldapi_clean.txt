@@ -1,0 +1,17 @@
+[LDAP Injection] (15)
+BenchmarkTest00021
+BenchmarkTest00694
+BenchmarkTest01243
+BenchmarkTest01501
+BenchmarkTest02208
+BenchmarkTest02472
+BenchmarkTest00044
+BenchmarkTest00630
+BenchmarkTest00695
+BenchmarkTest01241
+BenchmarkTest01242
+BenchmarkTest01326
+BenchmarkTest01490
+BenchmarkTest01568
+BenchmarkTest02196
+

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wapiti scan report</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/kube.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/master.css" />
+</head>
+<body>
+    <div id="page">
+        <header style="text-align: center">
+        <h2 class="title" style="text-align: center">Wapiti vulnerability report</h2>
+        <h3>Target: https://localhost:8444/benchmark/ldapi-Index.html</h3>
+        <p>Date of the scan: Fri, 27 Jun 2025 16:02:16 +0000. Scope of the scan: domain. Crawled pages: 226</p>
+        </header>
+        <hr />
+
+        <h4>Summary</h4>
+        <table class="width-100 hovered" style="background: url('logo_clear.png') no-repeat center;">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Number of vulnerabilities found</th>
+                </tr>
+            </thead>
+            <tbody id="summary">
+                    <tr>
+                        <td class="small">
+                            Backup file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Weak credentials
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            CRLF Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Content Security Policy Configuration
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Cross Site Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Potentially dangerous file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Command execution
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Path Traversal
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web application framework
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web server
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Htaccess Bypass
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Clickjacking Protection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTTP Strict Transport Security (HSTS)
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            MIME Type Confusion
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HttpOnly Flag cookie
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unencrypted Channels
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_17">LDAP Injection</a>
+                        </td>
+                        <td class="small .text-centered">15</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Log4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Open Redirect
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Reflected Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Secure Flag cookie
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Spring4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            TLS/SSL misconfigurations
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Server Side Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Subdomain takeover
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Blind SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unrestricted File Upload
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Vulnerable software
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Internal Server Error
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Resource consumption
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Review Webserver Metafiles for Information Leakage
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web technology
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTTP Methods
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            TLS/SSL misconfigurations
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+            </tbody>
+        </table>
+        <hr />
+        <div id="details">
+                <h3 id="vuln_type_17">LDAP Injection</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>LDAP Injection is an attack used to exploit web based applications that construct LDAP statements based on user input. When an application fails to properly sanitize user input, it’s possible to modify LDAP statements using a local proxy. This could result in the execution of arbitrary commands such as granting permissions to unauthorized queries.</dd>
+                </dl>
+
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest00021</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-0-4">cURL command line</a>
+                            <a href="#tab-vuln-17-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-0-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest00021</pre>
+                        </section>
+                        <section id="tab-vuln-17-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /benchmark/ldapi-00/BenchmarkTest00021?username=alice&amp;password=Letm3in_&amp;BenchmarkTest00021=%2A%29%29%00nosuchvalue HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00021?username=alice&amp;password=Letm3in_&amp;BenchmarkTest00021=%2A%29%29%00nosuchvalue&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00021.html&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest00694</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-1-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-1-4">cURL command line</a>
+                            <a href="#tab-vuln-17-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-1-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest00694</pre>
+                        </section>
+                        <section id="tab-vuln-17-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /benchmark/ldapi-00/BenchmarkTest00694?username=alice&amp;password=Letm3in_&amp;BenchmarkTest00694=%2A%29%29%00nosuchvalue HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00694?username=alice&amp;password=Letm3in_&amp;BenchmarkTest00694=%2A%29%29%00nosuchvalue&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00694.html&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest01243</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-2-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-2-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-2-4">cURL command line</a>
+                            <a href="#tab-vuln-17-2-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-2-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest01243</pre>
+                        </section>
+                        <section id="tab-vuln-17-2-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /benchmark/ldapi-00/BenchmarkTest01243?username=alice&amp;password=Letm3in_&amp;BenchmarkTest01243=%2A%29%29%00nosuchvalue HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-2-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01243?username=alice&amp;password=Letm3in_&amp;BenchmarkTest01243=%2A%29%29%00nosuchvalue&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01243.html?BenchmarkTest01243=SafeText&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-2-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest01501</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-3-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-3-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-3-4">cURL command line</a>
+                            <a href="#tab-vuln-17-3-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-3-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest01501</pre>
+                        </section>
+                        <section id="tab-vuln-17-3-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /benchmark/ldapi-00/BenchmarkTest01501?username=alice&amp;password=Letm3in_&amp;BenchmarkTest01501=%2A%29%29%00nosuchvalue HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-3-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01501?username=alice&amp;password=Letm3in_&amp;BenchmarkTest01501=%2A%29%29%00nosuchvalue&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01501.html&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-3-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest02208</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-4-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-4-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-4-4">cURL command line</a>
+                            <a href="#tab-vuln-17-4-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-4-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest02208</pre>
+                        </section>
+                        <section id="tab-vuln-17-4-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /benchmark/ldapi-00/BenchmarkTest02208?username=alice&amp;password=Letm3in_&amp;BenchmarkTest02208=%2A%29%29%00nosuchvalue HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-4-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest02208?username=alice&amp;password=Letm3in_&amp;BenchmarkTest02208=%2A%29%29%00nosuchvalue&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest02208.html?BenchmarkTest02208=SafeText&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-4-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest02472</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-5-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-5-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-5-4">cURL command line</a>
+                            <a href="#tab-vuln-17-5-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-5-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest02472</pre>
+                        </section>
+                        <section id="tab-vuln-17-5-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /benchmark/ldapi-00/BenchmarkTest02472?username=alice&amp;password=Letm3in_&amp;BenchmarkTest02472=%2A%29%29%00nosuchvalue HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-5-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest02472?username=alice&amp;password=Letm3in_&amp;BenchmarkTest02472=%2A%29%29%00nosuchvalue&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest02472.html&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-5-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest00044</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-6-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-6-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-6-4">cURL command line</a>
+                            <a href="#tab-vuln-17-6-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-6-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest00044</pre>
+                        </section>
+                        <section id="tab-vuln-17-6-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /benchmark/ldapi-00/BenchmarkTest00044 HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00044.html?BenchmarkTest00044=SafeText
+                                    <br>
+                                    content-length: 34
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    BenchmarkTest00044=%2A%29%29%00nosuchvalue&amp;BenchmarkTest00044=Movies&amp;BenchmarkTest00044=Writing&amp;BenchmarkTest00044=Singing&amp;foo=bar
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-6-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00044&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00044.html?BenchmarkTest00044=SafeText&#34; -d &#34;BenchmarkTest00044=%2A%29%29%00nosuchvalue&amp;BenchmarkTest00044=Movies&amp;BenchmarkTest00044=Writing&amp;BenchmarkTest00044=Singing&amp;foo=bar&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-6-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest00630</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-7-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-7-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-7-4">cURL command line</a>
+                            <a href="#tab-vuln-17-7-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-7-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest00630</pre>
+                        </section>
+                        <section id="tab-vuln-17-7-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /benchmark/ldapi-00/BenchmarkTest00630 HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00630.html
+                                    <br>
+                                    content-length: 94
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    email=wapiti2021%40mailinator.com&amp;password=Letm3in_&amp;BenchmarkTest00630=%2A%29%29%00nosuchvalue
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-7-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00630&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00630.html&#34; -d &#34;email=wapiti2021%40mailinator.com&amp;password=Letm3in_&amp;BenchmarkTest00630=%2A%29%29%00nosuchvalue&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-7-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest00695</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-8-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-8-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-8-4">cURL command line</a>
+                            <a href="#tab-vuln-17-8-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-8-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest00695</pre>
+                        </section>
+                        <section id="tab-vuln-17-8-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /benchmark/ldapi-00/BenchmarkTest00695 HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00695.html
+                                    <br>
+                                    content-length: 94
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    email=wapiti2021%40mailinator.com&amp;password=Letm3in_&amp;BenchmarkTest00695=%2A%29%29%00nosuchvalue
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-8-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00695&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest00695.html&#34; -d &#34;email=wapiti2021%40mailinator.com&amp;password=Letm3in_&amp;BenchmarkTest00695=%2A%29%29%00nosuchvalue&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-8-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔴 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest01241</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-9-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-9-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-9-4">cURL command line</a>
+                            <a href="#tab-vuln-17-9-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-9-1" style="min-height: 124px;">
+                            <pre>Potential LDAP injection via injection in the parameter BenchmarkTest01241</pre>
+                        </section>
+                        <section id="tab-vuln-17-9-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /benchmark/ldapi-00/BenchmarkTest01241 HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01241.html
+                                    <br>
+                                    content-length: 47
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    BenchmarkTest01241=Ms%20Bar&amp;BenchmarkTest01241=Movies&amp;BenchmarkTest01241=Writing&amp;BenchmarkTest01241=nosuchvalue%29%29%00&amp;foo=bar
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-9-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01241&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01241.html&#34; -d &#34;BenchmarkTest01241=Ms%20Bar&amp;BenchmarkTest01241=Movies&amp;BenchmarkTest01241=Writing&amp;BenchmarkTest01241=nosuchvalue%29%29%00&amp;foo=bar&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-9-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest01242</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-10-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-10-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-10-4">cURL command line</a>
+                            <a href="#tab-vuln-17-10-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-10-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest01242</pre>
+                        </section>
+                        <section id="tab-vuln-17-10-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /benchmark/ldapi-00/BenchmarkTest01242 HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01242.html
+                                    <br>
+                                    content-length: 42
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    BenchmarkTest01242=%2A%29%29%00nosuchvalue
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-10-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01242&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01242.html&#34; -d &#34;BenchmarkTest01242=%2A%29%29%00nosuchvalue&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-10-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔴 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest01326</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-11-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-11-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-11-4">cURL command line</a>
+                            <a href="#tab-vuln-17-11-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-11-1" style="min-height: 124px;">
+                            <pre>Potential LDAP injection via injection in the parameter BenchmarkTest01326</pre>
+                        </section>
+                        <section id="tab-vuln-17-11-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /benchmark/ldapi-00/BenchmarkTest01326 HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01326.html?BenchmarkTest01326=SafeText
+                                    <br>
+                                    content-length: 47
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    BenchmarkTest01326=Ms%20Bar&amp;BenchmarkTest01326=Movies&amp;BenchmarkTest01326=Writing&amp;BenchmarkTest01326=nosuchvalue%29%29%00&amp;foo=bar
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-11-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01326&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01326.html?BenchmarkTest01326=SafeText&#34; -d &#34;BenchmarkTest01326=Ms%20Bar&amp;BenchmarkTest01326=Movies&amp;BenchmarkTest01326=Writing&amp;BenchmarkTest01326=nosuchvalue%29%29%00&amp;foo=bar&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-11-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest01490</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-12-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-12-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-12-4">cURL command line</a>
+                            <a href="#tab-vuln-17-12-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-12-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest01490</pre>
+                        </section>
+                        <section id="tab-vuln-17-12-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /benchmark/ldapi-00/BenchmarkTest01490 HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01490.html?BenchmarkTest01490=SafeText
+                                    <br>
+                                    content-length: 42
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    BenchmarkTest01490=%2A%29%29%00nosuchvalue
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-12-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01490&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01490.html?BenchmarkTest01490=SafeText&#34; -d &#34;BenchmarkTest01490=%2A%29%29%00nosuchvalue&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-12-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest01568</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-13-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-13-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-13-4">cURL command line</a>
+                            <a href="#tab-vuln-17-13-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-13-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest01568</pre>
+                        </section>
+                        <section id="tab-vuln-17-13-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /benchmark/ldapi-00/BenchmarkTest01568 HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01568.html?BenchmarkTest01568=SafeText
+                                    <br>
+                                    content-length: 83
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    secure=default&amp;productID=default&amp;foo=foo&amp;BenchmarkTest01568=%2A%29%29%00nosuchvalue
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-13-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01568&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest01568.html?BenchmarkTest01568=SafeText&#34; -d &#34;secure=default&amp;productID=default&amp;foo=foo&amp;BenchmarkTest01568=%2A%29%29%00nosuchvalue&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-13-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+                        <h4>🔥 Vulnerability found in /benchmark/ldapi-00/BenchmarkTest02196</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-14-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-14-2">HTTP Request</a>
+                            <a href="#tab-vuln-17-14-4">cURL command line</a>
+                            <a href="#tab-vuln-17-14-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-14-1" style="min-height: 124px;">
+                            <pre>LDAP Injection via injection in the parameter BenchmarkTest02196</pre>
+                        </section>
+                        <section id="tab-vuln-17-14-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /benchmark/ldapi-00/BenchmarkTest02196 HTTP/1.1
+                                    <br>
+                                    host: localhost:8444
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: https://localhost:8444/benchmark/ldapi-00/BenchmarkTest02196.html
+                                    <br>
+                                    content-length: 34
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    BenchmarkTest02196=%2A%29%29%00nosuchvalue&amp;BenchmarkTest02196=Movies&amp;BenchmarkTest02196=Writing&amp;BenchmarkTest02196=Singing&amp;foo=bar
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-17-14-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest02196&#34; -e &#34;https://localhost:8444/benchmark/ldapi-00/BenchmarkTest02196.html&#34; -d &#34;BenchmarkTest02196=%2A%29%29%00nosuchvalue&amp;BenchmarkTest02196=Movies&amp;BenchmarkTest02196=Writing&amp;BenchmarkTest02196=Singing&amp;foo=bar&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-14-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-06&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>To protect against XPATH injection, Escape all variables using the right LDAP encoding function. Use Frameworks that Automatically Protect from LDAP Injection.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-community/attacks/LDAP_Injection">LDAP Injection</a></li>
+                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html">LDAP Injection Prevention Cheat Sheet</a></li>
+                    <li><a href="https://cwe.mitre.org/data/definitions/90.html">CWE-90: Improper Neutralization of Special Elements used in an LDAP Query (&#39;LDAP Injection&#39;)</a></li>
+                </ul>
+                <br />
+                <hr>
+        </div>
+        <footer class="small" id="footer"><a href="https://wapiti-scanner.github.io/" id="wapiti_link">Wapiti 3.2.4</a> &copy; Nicolas SURRIBAS 2006-2025</footer>
+	</div>
+    <script type="text/javascript" src="js/kube.min.js"></script>
+    <script>$K.init();</script>
+</body>
+</html>

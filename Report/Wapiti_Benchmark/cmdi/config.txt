@@ -1,0 +1,4 @@
+wapiti -u https://localhost:8443/benchmark/cmdi-Index.html -m exec --scope domain --flush-session --max-links-per-page 500 --max-parameters 100 --headless hidden --color -v 2 --tasks 15 --verify-ssl 0 --max-scan-time 28800 -f html -o D:\VNU\Lab\Report
+
+21:52 -> 00:32 : 2h40p
+2h -> 

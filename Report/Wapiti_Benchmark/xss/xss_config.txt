@@ -1,0 +1,7 @@
+wapiti -u https://localhost:8443/benchmark/xss-Index.html -m xss --scope domain --flush-session --max-links-per-page 500 --max-parameters 100 --headless hidden --color -v 2 --tasks 15 --verify-ssl 0 --max-scan-time 28800 -f html -o D:\VNU\Lab\Report
+
+00h58 -> 1h05 : 7p
+
+wapiti -u https://localhost:8443/benchmark/xss-Index.html -m xss --scope domain --flush-session --max-links-per-page 500 --max-parameters 100 --color -v 2 --tasks 15 --verify-ssl 0 --max-scan-time 28800 -f json -o D:\VNU\Lab\Report\xss_report.json
+
+8h27 -> 8h33

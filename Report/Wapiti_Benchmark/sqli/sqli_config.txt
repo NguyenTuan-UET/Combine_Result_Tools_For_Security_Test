@@ -1,0 +1,18 @@
+wapiti -u https://localhost:8443/benchmark/sqli-Index.html -m sql --scope domain --max-links-per-page 600 --max-parameters 100 --color -v 2 --tasks 15 --verify-ssl 0 --max-scan-time 28800 -f html -o D:\VNU\Lab\Report
+
+7h02 -> 7h07
+
+wapiti -u https://localhost:8443/benchmark/sqli-Index.html -m sql --scope domain --flush-session --max-links-per-page 600 --max-parameters 100 --color -v 2 --tasks 15 --verify-ssl 0 --max-scan-time 28800 -f json -o D:\VNU\Lab\Report\sqli_report.json
+
+8h40 -> 8h46
+
+----------------------
+
+wapiti -u https://localhost:8443/benchmark/sqli-Index.html -m timesql --scope domain --max-links-per-page 600 --max-parameters 100 --color -v 2 --tasks 15 --verify-ssl 0 --max-scan-time 28800 -f html -o D:\VNU\Lab\Report
+
+12h59 -> 15h36
+
+
+wapiti -u https://localhost:8443/benchmark/sqli-Index.html -m timesql --scope domain --flush-session --max-links-per-page 600 --max-parameters 100 --color -v 2 --tasks 15 --verify-ssl 0 --max-scan-time 28800 -f json -o D:\VNU\Lab\Report\timesqli_report.json
+
+8h50 ->
